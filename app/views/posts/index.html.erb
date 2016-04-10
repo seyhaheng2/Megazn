@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Image</th>
+      <th>Description</th>
+      <th>Meta title</th>
+      <th>Meta description</th>
+      <th>Type</th>
+      <th>Excerpt</th>
+      <th>Format post</th>
+      <th>Hide post</th>
+      <th>Ads</th>
+      <th>Category</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= post.image %></td>
+        <td><%= post.description %></td>
+        <td><%= post.meta_title %></td>
+        <td><%= post.meta_description %></td>
+        <td><%= post.type %></td>
+        <td><%= post.excerpt %></td>
+        <td><%= post.format_post %></td>
+        <td><%= post.hide_post %></td>
+        <td><%= post.ads %></td>
+        <td><%= post.category %></td>
+        <td><%= post.user %></td>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Post', new_post_path %>

@@ -1,0 +1,21 @@
+<div class="hot-topic-slider">
+   <div class="content-topic-slider">
+      <div class="wrap-item">
+         <% @posts.each do |p| %>
+         <div class="item">
+            <div class="item-hot-topic">
+               <a href="#">
+
+<!--                <img width="570" height="380" src="assets/3-570x380.jpg"  alt="3" srcset="http://7uptheme.com/wordpress/newday/wp-content/uploads/2016/01/3-300x200.jpg 300w, http://7uptheme.com/wordpress/newday/wp-content/uploads/2016/01/3-768x512.jpg 768w, http://7uptheme.com/wordpress/newday/wp-content/uploads/2016/01/3-1024x683.jpg 1024w, http://7uptheme.com/wordpress/newday/wp-content/uploads/2016/01/3-600x400.jpg 600w, http://7uptheme.com/wordpress/newday/wp-content/uploads/2016/01/3-120x80.jpg 120w, http://7uptheme.com/wordpress/newday/wp-content/uploads/2016/01/3-270x180.jpg 270w, http://7uptheme.com/wordpress/newday/wp-content/uploads/2016/01/3-90x60.jpg 90w, http://7uptheme.com/wordpress/newday/wp-content/uploads/2016/01/3-570x380.jpg 570w, http://7uptheme.com/wordpress/newday/wp-content/uploads/2016/01/3.jpg 1200w" sizes="(max-width: 570px) 100vw, 570px" />
+ -->
+
+               <%= image_tag p.image, class: "attachment-570x380 size-570x380 wp-post-image" %>
+
+               </a>
+               <h2><%= p.title%></h2>
+            </div>
+         </div>
+         <% end %>   
+      </div>
+   </div>
+</div>
